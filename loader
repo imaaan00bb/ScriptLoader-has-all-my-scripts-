@@ -1,0 +1,114 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Name = Instance.new("TextLabel")
+local Credits = Instance.new("TextLabel")
+local RizzGenLoader = Instance.new("TextButton")
+local TrollPanelLoader = Instance.new("TextButton")
+local HyperHubLoader = Instance.new("TextButton")
+local Close = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.Active = true
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.326226026, 0, 0.348387092, 0)
+Frame.Size = UDim2.new(0, 455, 0, 250)
+
+Name.Name = "Name"
+Name.Parent = Frame
+Name.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Name.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Name.BorderSizePixel = 0
+Name.Position = UDim2.new(0, 0, 0.115999997, 0)
+Name.Size = UDim2.new(0, 455, 0, 35)
+Name.Font = Enum.Font.SourceSans
+Name.Text = "Script Loader by youraveragebacon"
+Name.TextColor3 = Color3.fromRGB(0, 0, 0)
+Name.TextSize = 14.000
+
+Credits.Name = "Credits"
+Credits.Parent = Frame
+Credits.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Credits.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Credits.BorderSizePixel = 0
+Credits.Position = UDim2.new(0, 0, 0.256000012, 0)
+Credits.Size = UDim2.new(0, 455, 0, 36)
+Credits.Font = Enum.Font.SourceSans
+Credits.Text = "all scripts made by me"
+Credits.TextColor3 = Color3.fromRGB(0, 0, 0)
+Credits.TextSize = 14.000
+
+RizzGenLoader.Name = "RizzGenLoader"
+RizzGenLoader.Parent = ScreenGui
+RizzGenLoader.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+RizzGenLoader.BorderColor3 = Color3.fromRGB(0, 0, 0)
+RizzGenLoader.BorderSizePixel = 0
+RizzGenLoader.Position = UDim2.new(0.326226026, 0, 0.477419347, 0)
+RizzGenLoader.Size = UDim2.new(0, 455, 0, 50)
+RizzGenLoader.Font = Enum.Font.SourceSans
+RizzGenLoader.Text = "Click me to load RizzGen"
+RizzGenLoader.TextColor3 = Color3.fromRGB(0, 0, 0)
+RizzGenLoader.TextSize = 14.000
+
+TrollPanelLoader.Name = "TrollPanelLoader"
+TrollPanelLoader.Parent = ScreenGui
+TrollPanelLoader.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TrollPanelLoader.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TrollPanelLoader.BorderSizePixel = 0
+TrollPanelLoader.Position = UDim2.new(0.326226026, 0, 0.541935503, 0)
+TrollPanelLoader.Size = UDim2.new(0, 455, 0, 50)
+TrollPanelLoader.Font = Enum.Font.SourceSans
+TrollPanelLoader.Text = "Click me to load youraveragebacons trolling panel"
+TrollPanelLoader.TextColor3 = Color3.fromRGB(0, 0, 0)
+TrollPanelLoader.TextSize = 14.000
+
+HyperHubLoader.Name = "HyperHubLoader"
+HyperHubLoader.Parent = ScreenGui
+HyperHubLoader.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+HyperHubLoader.BorderColor3 = Color3.fromRGB(0, 0, 0)
+HyperHubLoader.BorderSizePixel = 0
+HyperHubLoader.Position = UDim2.new(0.326226026, 0, 0.606451631, 0)
+HyperHubLoader.Size = UDim2.new(0, 455, 0, 50)
+HyperHubLoader.Font = Enum.Font.SourceSans
+HyperHubLoader.Text = "Click me to load Hyper Hub bladeball"
+HyperHubLoader.TextColor3 = Color3.fromRGB(0, 0, 0)
+HyperHubLoader.TextSize = 14.000
+
+Close.Name = "Close"
+Close.Parent = ScreenGui
+Close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Close.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Close.BorderSizePixel = 0
+Close.Position = UDim2.new(0.622601271, 0, 0.348387092, 0)
+Close.Size = UDim2.new(0, 38, 0, 36)
+Close.Font = Enum.Font.SourceSans
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(0, 0, 0)
+Close.TextSize = 14.000
+
+-- Scripts:
+
+local function IXPVK_fake_script() -- Close.Script 
+	local script = Instance.new('Script', Close)
+
+	ocal SGui = script.Parent
+	local Frame = SGui:WaitForChild("Frame")
+	local Button = SGui:WaitForChild("TextButton")
+	local Lable = SGui:WaitForChild("TextLable")
+	
+	Button.MouseButton1Up:Connect(function()
+		Frame.Visible = not Frame.Visible
+	end)
+end
+coroutine.wrap(IXPVK_fake_script)()
